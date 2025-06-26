@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Resume Scorer API Schema",
+  "definitions": {
+    "ScoreRequest": {
+      "type": "object",
+      "required": ["student_id", "goal", "resume_text"],
+      "properties": {
+        "student_id": {
+          "type": "string",
+          "description": "Unique student identifier",
+          "minLength": 1
+        },
+        "goal": {
+          "type": "string",
+          "description": "Target position or domain",
+          "enum": ["Amazon SDE", "ML Internship", "GATE ECE", "Data Analyst"]
+        },
+        "resume_text": {
+          "type": "string",
+          "description": "Full plain-text resume content",
+          "minLength": 1
+        }
+      }
+    },
+    "ScoreResponse": {
+      "type": "object",
+      "required": ["score", "matched_skills", "missing_skills", "suggested_learning_path"],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Match score between 0.0 and 1.0"
+        },
+        "matched_skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Skills found in resume that match the goal"
+        },
+        "missing_skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Required skills not found in resume"
+        },
+        "suggested_learning_path": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Recommended learning steps for missing skills"
+        }
+      }
+    },
+    "HealthResponse": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ok"]
+        }
+      }
+    },
+    "VersionResponse": {
+      "type": "object",
+      "required": ["version", "supported_goals", "default_goal"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "API version"
+        },
+        "supported_goals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of supported goal types"
+        },
+        "default_goal": {
+          "type": "string",
+          "description": "Default goal model"
+        }
+      }
+    }
+  }
+}

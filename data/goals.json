@@ -1,0 +1,53 @@
+{
+  "Amazon SDE": [
+    "Java",
+    "Python",
+    "Data Structures",
+    "Algorithms",
+    "System Design",
+    "SQL",
+    "REST APIs",
+    "Git",
+    "Object Oriented Programming",
+    "Debugging",
+    "Testing",
+    "AWS",
+    "Microservices",
+    "Spring Boot",
+    "JavaScript"
+  ],
+  "ML Internship": [
+    "Python",
+    "Machine Learning",
+    "Deep Learning",
+    "NumPy",
+    "Pandas",
+    "Scikit-learn",
+    "TensorFlow",
+    "PyTorch",
+    "Statistics",
+    "Linear Algebra",
+    "Data Analysis",
+    "Feature Engineering",
+    "Model Evaluation",
+    "Computer Vision",
+    "Natural Language Processing"
+  ],
+  "GATE ECE": [
+    "Digital Electronics",
+    "Analog Electronics",
+    "Signal Processing",
+    "Communication Systems",
+    "Control Systems",
+    "Electromagnetics",
+    "Network Theory",
+    "Electronic Devices",
+    "VLSI Design",
+    "Microprocessors",
+    "Power Electronics",
+    "Antenna Theory",
+    "RF Circuits",
+    "Digital Signal Processing",
+    "Linear Systems"
+  ]
+}

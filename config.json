@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "minimum_score_to_pass": 0.6,
+  "log_score_details": true,
+  "model_goals_supported": [
+    "Amazon SDE",
+    "ML Internship",
+    "GATE ECE"
+  ],
+  "default_goal_model": "Amazon SDE",
+  "model_config": {
+    "tfidf_max_features": 1000,
+    "tfidf_ngram_range": [1, 2],
+    "logistic_regression_max_iter": 1000,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "api_config": {
+    "max_resume_length": 10000,
+    "request_timeout": 30,
+    "enable_cors": true
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}
